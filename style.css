@@ -156,14 +156,29 @@
   transition: all 0.4s;
 }
 
-.mv__image {
-  width: 40%;
+.mv__content {
+  position: absolute;
+  right: 64px;
+  top: 0;
+  max-height: fit-content;
+}
+
+.mv__wrapper {
   position: relative;
-  top: -18px;
+  max-width: 560px;
+  top: 0px;
+  aspect-ratio: 1/1.25;
+  flex-shrink: 0;
   @media (max-width: 767px) {
-    width: 40%;
-    top: 0;
+    right: 0;
+    max-height: 450px;
   }
+}
+
+.mv__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .ceo {
@@ -235,15 +250,21 @@
 }
 
 .about__main-img {
-  height: 650px;
+  max-height: 650px;
+  max-width: 445px;
   margin-right: 70px;
   @media (max-width: 767px) {
-    width: 100%;
+    max-width: 100%;
+    margin-right: 0px;
+    height: 200px;
   }
 }
 
 .img {
+  width: 100%;
   height: 100%;
+  object-fit: cover;
+  object-position: 0 35%;
 }
 
 .about__main-content {
@@ -442,6 +463,9 @@
   border: 5px solid var(--main-color);
   border-radius: 20px;
   background-color: var(--bg-color);
+  @media (max-width: 767px) {
+    padding: 32px;
+  }
 }
 
 .contact-form {
@@ -477,27 +501,39 @@
 }
 
 .form-text-area {
-  width: 300px;
+  max-width: 300px;
+  width: 100%;
   height: 40px;
   background-color: white;
   border-radius: 5px;
+  @media (max-width: 767px) {
+    max-width: 100%;
+  }
 }
 
 .form-textarea {
-  width: 600px;
+  max-width: 600px;
+  width: 100%;
   height: 200px;
   background-color: white;
   border-radius: 5px;
   padding: 8px;
+  @media (max-width: 767px) {
+    max-width: 100%;
+  }
 }
 
 .select-form-area {
-  width: 300px;
+  max-width: 300px;
+  width: 100%;
   height: 40px;
   background-color: white;
   border-radius: 5px;
   line-height: 40px;
   padding-left: 10px;
+  @media (max-width: 767px) {
+    max-width: 100%;
+  }
 }
 
 .form-btn {
